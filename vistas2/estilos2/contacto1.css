@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.contenedorHeader{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(200, 200, 200, 0.800);
+    height: 85px;
+}
+.logo{ 
+    display: flex;
+    width: 50%; /* TAMAÑO LOGO */
+    height: 50%;  
+}
+
+.logoEncabezado{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
+
+.btnEncabezado{   /* CONTENEDOR DE LOS BOTONES DEL ENCABEZADO (INICIO S, REGISTRARSE) */
+    grid-column-start: 3;  /* ESPECIFICA QUE LOS BOTONES VAN EN LA GRILLA 3 DEL CONTENEDOR */
+    display: flex; 
+    justify-content:space-evenly; 
+    border-right: 0;
+    right: 0;
+    /* display: grid; / / ESPECIFICAR QUE EL DISPLAY SE VA A DIVIDIR */ 
+    /* grid-template-columns: repeat(3, 1fr); / / DIVIDIR EN ESPACIO EN 3 COLUMNAS DE UNA FRACCION */
+    /* grid-template-columns: 5rem 8rem 3rem 8rem; / / DIVIDIR EN ESPACIO EN 4 COLUMNAS POR REMS PARA UBICAR LOS BOTONES DE INICIOS Y REGISTRARSE */
+    /* grid-gap: 3rem; / / DARLE UN ESPACIO ENTRE LAS GRILLAS */
+    align-items: center;  /* JUSTIFICAR EL CONTENIDO EN EL CENTRO DE ARRIBA HACIA ABAJO */
+    /* justify-content:space-between; / / JUSTIFICAR EL CONTENIDO EN EL CENTRO DE LOS LADOS */
+    /* text-align: center; /  / JUSTIFICAR EL CONTENIDO EN EL CENTRO DE LOS LADOS */
+}
+.btnInicioSesion{ /* BOTON INICIAR SESION */
+    display: flex;
+    top: 2rem;
+    color: rgb(250, 249, 249);
+    text-decoration: none; /* QUITAR DECORACION DEL TEXTO */ 
+    font-size: 1.2rem; /* TAMAÑO DE LA LETRA */
+    font-weight: 600;  /* GROSOR DEL TEXTO */ 
+    background-color: rgba(255, 30, 30, 0.850);
+    border-radius: 5%;
+    grid-column-start: 2;  /* ESPECIFICA QUE EL BOTON INICIOS VA EN LA GRILLA 2 DEL CONTENEDOR DE LOS BOTONES */
+    border-radius: 0.4rem; /* BORDE REDONDO AL BOTON */
+    padding: 0 0.5rem; /* ESPACIO SOLO A LOS LADOS AL BOTON */
+}
+.btnInicioSesion:hover{
+    background-color: rgba(45, 45, 45, 0.95);
+    color: white;
+}
+.btnRegistro{  /* BOTON REGISTRARSE */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* QUITAR DECORACION DEL TEXTO */ 
+    font-size: 1.2rem;
+    font-weight: 600;  /* GROSOR DEL TEXTO */ 
+    background-color: rgba(45, 45, 45, 0.95);
+    border-radius: 5%;
+    grid-column-start: 4; /* ESPECIFICA QUE EL BOTON REGISTRARSE VA EN LA GRILLA 4 DEL CONTENEDOR DE LOS BOTONES */
+    border-radius: 0.4rem; /* BORDE REDONDO AL BOTON */
+    padding: 0 0.5rem; /* ESPACIO SOLO A LOS LADOS AL BOTON */
+}
+.btnRegistro:hover{
+    background-color: rgba(255, 30, 30, 0.850);
+    color: rgb(0, 0, 0);
+}
+.iconousuario{
+    grid-column-start: 3;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 20%;
+    height: 40%;
+}
+.gridContainer{ /* CONTENEDOR DEL MENU HORIZONTAL */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* AGREGA COLUMNAS A LA GRILLA */ 
+/*     grid-template-rows: repeat(3, 1fr) AGREGA FILAS A LA GRILLA */
+    background-color: rgba(30, 30, 30, 0.850);
+}
+.nav{  /* MENU HORIZONTAL */
+    color: rgb(253, 249, 249);
+    grid-column-start: 2; /* ESPECIFICA EN QUE GRILLA VA ESTAR EN CONTENIDO */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.nav-text{
+    font-size: 1.5rem;
+}
+
+.nav li a{  /* ITEMS DEL MENU  (lista y links) */
+    display: block;
+    padding: 0.6rem 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav li:hover{ /* BACKGROUND DE LA LISTA CUANDO PASE EL CURSOR */
+    background-color: rgba(255, 30, 30, 0.850);
+}
+
+.menuVertical{  /* MENU VERTICAL ADESPLEGABLE*/ 
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: 15rem;
+    padding: 0; 
+    background-color: rgba(30, 30, 30, 0.850);
+    z-index: 2; /*mandar las cosas al frente*/
+}
+.nav li:hover .menuVertical{ /* DESPLIEGUE DE LA LISTA PASANDO EL CURSOR */
+    display: block;  
+}
+.menuVertical li:hover{  /* BACKGROUND DE LOS ITEMS DE LA LISTA VERTICAL DESPLEGABLE */
+    background-color: rgba(200, 200, 200, 0.800);
+}
+.menuVertical li a{  /* ITEMS DEL MENU VERTICAL DESPLEGABLE */
+    display: block;
+    color: white;
+    padding: 1rem 1rem 1rem 1.3rem;
+}
+.menuVertical li a:hover{  /* COLOR NEGRO PARA LOS ITEMS DEL MENU VERTICAL DESPLEGABLE CUANDO PASE EL CURSOR */
+    color: rgb(70, 68, 68);
+}
+
+.imgS{
+    width: 30%;
+    height: 50%;
+    border-radius: 5px;
+    border: 2px solid rgba(200, 200, 200, 0.800);
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-link{
+    color:white;
+}
+.card{
+    width: 20rem;
+}
+.btn{
+    display: flex; 
+    justify-content: center;
+     
+} 
+/* empieza la modificacion de contacto */
+.contactos{
+    background-color: #4e4b4bc7;
+}
+h1{
+    color: white;
+    font-size: 1.3rem;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+h1:hover{
+    color: rgb(255, 0, 0);
+    transition:.8s ease all;
+    transform: scale(1);
+    box-shadow: inset -10px 10px 10px rgba(252, 249, 249, 0.2),inset  6px 4px 8px rgba(0,0,0,.2) ;
+}
+h3{
+    justify-content: flex-start;
+    align-items: start;
+    text-align: start;
+    font-size: 0.8rem;
+    padding-bottom: 4%;
+    color: white;
+    cursor: pointer;
+}
+h3:hover{
+    color:rgb(255, 0, 0) ;
+    /* transition:.8s ease all;
+    transform: scale(1);
+    box-shadow: inset -6px 9px 10px rgba(0,0,0,.2),inset  6px -9px 10px rgba(0,0,0,.2) ; */
+}
+svg{
+    color: #ffffff;
+}
+.ubicación{
+    width: 35rem;
+    height: 25rem;
+    padding: 6px;
+}
+.contacto{
+    background-color: rgb(179, 174, 174);
+}
+.contactos{
+    background-color: #141414;
+}
+input{
+    font-size: large;
+    background-position: center;
+    width: 18rem;
+    height: 3rem;
+}
+.contact{
+    border: none;
+    margin-top: 2%;
+}
+textarea {
+    resize: vertical;
+    margin-top: 2%;
+    border: none;
+}
+.enviar{
+    background-color: red;
+    color: white;
+    text-decoration-line: none;
+    padding: 2% 10% 2% 10%;
+}
+.enviar:hover{
+    cursor: pointer;
+    transition:.4s ease all;
+    transform: scale(.9,.9) rotate(-6deg);
+    box-shadow: -7px 7px #141414;
+}

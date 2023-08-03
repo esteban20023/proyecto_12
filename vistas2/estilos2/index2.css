@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   background-image: url(/imagenes/imagenes/moto1.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.contenedorHeader{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(200, 200, 200, 0.800);
+    height: 85px;
+}
+.logo{ 
+    display: flex;
+    width: 50%; /* TAMAÑO LOGO */
+    height: 50%;  
+}
+
+.logoEncabezado{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
+
+.btnEncabezado{   /* CONTENEDOR DE LOS BOTONES DEL ENCABEZADO (INICIO S, REGISTRARSE) */
+    grid-column-start: 3;  /* ESPECIFICA QUE LOS BOTONES VAN EN LA GRILLA 3 DEL CONTENEDOR */
+    display: grid; 
+    grid-template-columns: 5fr 5fr 2fr;
+    justify-content:space-evenly; 
+    border-right: 0;
+    right: 0;
+    align-items: center;
+    grid-gap: 0.4rem;  /* JUSTIFICAR EL CONTENIDO EN EL CENTRO DE ARRIBA HACIA ABAJO */
+    /* display: grid; / / ESPECIFICAR QUE EL DISPLAY SE VA A DIVIDIR */ 
+    /* grid-template-columns: repeat(3, 1fr); / / DIVIDIR EN ESPACIO EN 3 COLUMNAS DE UNA FRACCION */
+    /* grid-template-columns: 5rem 8rem 3rem 8rem; / / DIVIDIR EN ESPACIO EN 4 COLUMNAS POR REMS PARA UBICAR LOS BOTONES DE INICIOS Y REGISTRARSE */
+    /* grid-gap: 3rem; / / DARLE UN ESPACIO ENTRE LAS GRILLAS */
+    
+    
+}
+.btnInicioSesion{ /* BOTON INICIAR SESION */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* QUITAR DECORACION DEL TEXTO */ 
+    font-size: 1.2rem; /* TAMAÑO DE LA LETRA */
+    font-weight: 600;  /* GROSOR DEL TEXTO */ 
+    background-color: rgba(255, 30, 30, 0.850);
+    border-radius: 5%;
+    grid-column-start: 1;  /* ESPECIFICA QUE EL BOTON INICIOS VA EN LA GRILLA 2 DEL CONTENEDOR DE LOS BOTONES */
+    border-radius: 0.4rem; /* BORDE REDONDO AL BOTON */
+    padding: 0 0.5rem; /* ESPACIO SOLO A LOS LADOS AL BOTON */
+    text-align: center;
+
+}
+.btnInicioSesion:hover{
+    background-color: rgba(45, 45, 45, 0.95);
+    color: white;
+}
+.btnRegistro{  /* BOTON REGISTRARSE */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* QUITAR DECORACION DEL TEXTO */ 
+    font-size: 1.2rem;
+    font-weight: 600;  /* GROSOR DEL TEXTO */ 
+    background-color: rgba(45, 45, 45, 0.95);
+    border-radius: 5%;
+    grid-column-start: 2; /* ESPECIFICA QUE EL BOTON REGISTRARSE VA EN LA GRILLA 4 DEL CONTENEDOR DE LOS BOTONES */
+    border-radius: 0.4rem; /* BORDE REDONDO AL BOTON */
+    padding: 0 0.5rem; /* ESPACIO SOLO A LOS LADOS AL BOTON */
+    text-align: center;
+}
+.btnRegistro:hover{
+    background-color: rgba(255, 30, 30, 0.850);
+    color: rgb(0, 0, 0);
+}
+.iconousuario{
+    grid-column-start: 3;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+.gridContainer{ /* CONTENEDOR DEL MENU HORIZONTAL */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* AGREGA COLUMNAS A LA GRILLA */ 
+/*     grid-template-rows: repeat(3, 1fr) AGREGA FILAS A LA GRILLA */
+    background-color: rgba(30, 30, 30, 0.850);
+}
+ 
+.nav{  /* MENU HORIZONTAL */
+    color: rgb(253, 249, 249);
+    grid-column-start: 2; /* ESPECIFICA EN QUE GRILLA VA ESTAR EN CONTENIDO */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.nav-text{
+    font-size: 1.5rem;
+}
+
+.nav li a{  /* ITEMS DEL MENU  (lista y links) */
+    display: block;
+    padding: 0.6rem 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav li:hover{ /* BACKGROUND DE LA LISTA CUANDO PASE EL CURSOR */
+    background-color: rgba(255, 30, 30, 0.850);
+}
+
+.menuVertical{  /* MENU VERTICAL ADESPLEGABLE*/ 
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: 15rem;
+    padding: 0; 
+    background-color: rgba(30, 30, 30, 0.850);
+    z-index: 2; /*mandar las cosas al frente*/
+}
+.nav li:hover .menuVertical{ /* DESPLIEGUE DE LA LISTA PASANDO EL CURSOR */
+    display: block;  
+}
+.menuVertical li:hover{  /* BACKGROUND DE LOS ITEMS DE LA LISTA VERTICAL DESPLEGABLE */
+    background-color: rgba(200, 200, 200, 0.800);
+}
+.menuVertical li a{  /* ITEMS DEL MENU VERTICAL DESPLEGABLE */
+    display: block;
+    color: white;
+    padding: 1rem 1rem 1rem 1.3rem;
+}
+.menuVertical li a:hover{  /* COLOR NEGRO PARA LOS ITEMS DEL MENU VERTICAL DESPLEGABLE CUANDO PASE EL CURSOR */
+    color: rgb(70, 68, 68);
+}
+
+.imgS{
+    width: 30%;
+    height: 50%;
+    border-radius: 5px;
+    border: 2px solid rgba(200, 200, 200, 0.800);
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-link{
+    color:white;
+}
+.card{
+    width: 20rem;
+}
+.carrito{
+    bottom: -9em;
+    right:-10em ;
+}
+.bi{
+    fill:#fffefe;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0 0.1rem 0;
+    
+}
+.btn{
+    display: flex; 
+    justify-content: center;
+     
+}
+p{
+    background-color: rgba(0, 0, 0, 0.432);
+    color: white;
+    cursor: col-resize;
+    font-size: 2.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: start;
+}
+h1{
+    background-color: rgba(0, 0, 0, 0.432);
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4rem;
+    text-align: start;
+}
+

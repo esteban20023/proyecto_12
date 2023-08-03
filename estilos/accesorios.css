@@ -1,0 +1,289 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: url(https://cdn.pixabay.com/photo/2021/05/27/18/15/motorcycle-6288958_1280.jpg); */
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.contenedorHeader{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(200, 200, 200, 0.800);
+    height: 85px;
+}
+.logo{ 
+    display: flex;
+    width: 50%; /* TAMAÑO LOGO */
+    height: 50%;  
+}
+
+.logoEncabezado{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
+
+.btnEncabezado{   /* CONTENEDOR DE LOS BOTONES DEL ENCABEZADO (INICIO S, REGISTRARSE) */
+    grid-column-start: 3;  /* ESPECIFICA QUE LOS BOTONES VAN EN LA GRILLA 3 DEL CONTENEDOR */
+    display: flex; 
+    justify-content:space-evenly; 
+    border-right: 0;
+    right: 0;
+    /* display: grid; / / ESPECIFICAR QUE EL DISPLAY SE VA A DIVIDIR */ 
+    /* grid-template-columns: repeat(3, 1fr); / / DIVIDIR EN ESPACIO EN 3 COLUMNAS DE UNA FRACCION */
+    /* grid-template-columns: 5rem 8rem 3rem 8rem; / / DIVIDIR EN ESPACIO EN 4 COLUMNAS POR REMS PARA UBICAR LOS BOTONES DE INICIOS Y REGISTRARSE */
+    /* grid-gap: 3rem; / / DARLE UN ESPACIO ENTRE LAS GRILLAS */
+    align-items: center;  /* JUSTIFICAR EL CONTENIDO EN EL CENTRO DE ARRIBA HACIA ABAJO */
+    /* justify-content:space-between; / / JUSTIFICAR EL CONTENIDO EN EL CENTRO DE LOS LADOS */
+    /* text-align: center; /  / JUSTIFICAR EL CONTENIDO EN EL CENTRO DE LOS LADOS */
+}
+.btnInicioSesion{ /* BOTON INICIAR SESION */
+    display: flex;
+    top: 2rem;
+    color: rgb(250, 249, 249);
+    text-decoration: none; /* QUITAR DECORACION DEL TEXTO */ 
+    font-size: 1.2rem; /* TAMAÑO DE LA LETRA */
+    font-weight: 600;  /* GROSOR DEL TEXTO */ 
+    background-color: rgba(255, 30, 30, 0.850);
+    border-radius: 5%;
+    grid-column-start: 2;  /* ESPECIFICA QUE EL BOTON INICIOS VA EN LA GRILLA 2 DEL CONTENEDOR DE LOS BOTONES */
+    border-radius: 0.4rem; /* BORDE REDONDO AL BOTON */
+    padding: 0 0.5rem; /* ESPACIO SOLO A LOS LADOS AL BOTON */
+    
+}
+.btnInicioSesion:hover{
+    background-color: rgba(45, 45, 45, 0.95);
+    color: white;
+    text-decoration: none;
+}
+.btnRegistro{  /* BOTON REGISTRARSE */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* QUITAR DECORACION DEL TEXTO */ 
+    font-size: 1.2rem;
+    font-weight: 600;  /* GROSOR DEL TEXTO */ 
+    background-color: rgba(45, 45, 45, 0.95);
+    border-radius: 5%;
+    grid-column-start: 4; /* ESPECIFICA QUE EL BOTON REGISTRARSE VA EN LA GRILLA 4 DEL CONTENEDOR DE LOS BOTONES */
+    border-radius: 0.4rem; /* BORDE REDONDO AL BOTON */
+    padding: 0 0.5rem; /* ESPACIO SOLO A LOS LADOS AL BOTON */
+}
+.btnRegistro:hover{
+    background-color: rgba(255, 30, 30, 0.850);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.gridContainer{ /* CONTENEDOR DEL MENU HORIZONTAL */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* AGREGA COLUMNAS A LA GRILLA */ 
+/*     grid-template-rows: repeat(3, 1fr) AGREGA FILAS A LA GRILLA */
+    background-color: rgba(30, 30, 30, 0.850);
+}
+.btnHamburguesa{
+    grid-column-start: 1;
+    width: 20%;
+    height: 20%;
+}
+ 
+.nav{  /* MENU HORIZONTAL */
+    color: rgb(253, 249, 249);
+    grid-column-start: 2; /* ESPECIFICA EN QUE GRILLA VA ESTAR EN CONTENIDO */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.nav-text{
+    font-size: 1.5rem;
+}
+
+.nav li a{  /* ITEMS DEL MENU  (lista y links) */
+    display: block;
+    padding: 0.6rem 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav li:hover{ /* BACKGROUND DE LA LISTA CUANDO PASE EL CURSOR */
+    background-color: rgba(255, 30, 30, 0.850);
+}
+
+.menuVertical{  /* MENU VERTICAL ADESPLEGABLE*/ 
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: 15rem;
+    padding: 0; 
+    background-color: rgba(30, 30, 30, 0.850);
+    z-index: 2; /*mandar las cosas al frente*/
+}
+.nav li:hover .menuVertical{ /* DESPLIEGUE DE LA LISTA PASANDO EL CURSOR */
+    display: block;  
+}
+.menuVertical li:hover{  /* BACKGROUND DE LOS ITEMS DE LA LISTA VERTICAL DESPLEGABLE */
+    background-color: rgba(200, 200, 200, 0.800);
+}
+.menuVertical li a{  /* ITEMS DEL MENU VERTICAL DESPLEGABLE */
+    display: block;
+    color: white;
+    padding: 1rem 1rem 1rem 1.3rem;
+}
+.menuVertical li a:hover{  /* COLOR NEGRO PARA LOS ITEMS DEL MENU VERTICAL DESPLEGABLE CUANDO PASE EL CURSOR */
+    color: rgb(70, 68, 68);
+}
+
+
+/* titulo de accesorios */
+.title{
+    color: rgb(5, 5, 5);
+    padding: 4rem 0 0 0;
+}
+/* modifiacacion de las cards*/
+.btn{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #f90202;
+    box-shadow: 0px 0px 5px 2px #121212;
+    border-radius: 20px;
+}
+.btn:hover{
+    background-color: rgb(12, 12, 13);
+    border: none ;
+}
+.row{
+    margin: 0 8rem 4rem 8rem;
+
+}
+.card-body{
+    color: rgb(248, 243, 243);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card-title{
+    font-size: 1.5rem;
+}
+h6{
+    color: #121212;
+}
+.btnCard{
+    padding: 3% 20% 3% 20%;
+    background-color: #f90202;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btnCard:hover{
+    background-color: #0c0b0b;
+}
+a{
+    color: white;
+}
+/* pasar a otro computador desde aqui */
+/* modificacion de los modales */
+.modal-content{
+    background-color: rgb(253, 247, 247);
+    box-shadow: 0px 0px 2px 2px #977f7f;
+    padding: 0;
+    margin: 0;
+    width: 35rem;
+    height: 25rem;
+}
+/* modificacion del titulo del modal */
+.modal-header{
+    background-color: rgb(250, 6, 6);
+}
+/* cerrar el modal*/
+.close{
+    color: #faf4f4;
+}
+.close:hover{
+    background-color: #0e0101;
+}
+#number{
+    font-size: 1rem;
+    height: 30px;
+    width: 30px;
+}
+select{
+    /*border: none;*/
+    font-size: 1rem;
+
+}
+/* modificacion de h3, p, h5 */
+h5{
+    color: #0a0a0a;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h3{
+    color: #050505;
+}
+p{
+    color: #0c0b0b;
+}
+/* modificacion de contenido de los modales */
+.imagen-produ{
+    display: flex;
+    width: 150px;
+    height:150px;
+    padding:.4rem!important ;
+    border-radius:.8rem;
+    overflow: hidden;
+    position: relative;
+    
+}
+/* modificacion de los precios color y alineacion */
+p{
+    color: rebeccapurple;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+/* modificar el footer del modal */
+.modal-footer{
+    justify-content: center;
+    background-color: #f0ecec96;
+}
+/* cerrar el modal*/
+.close{
+    background-color: red;
+    color: #0e0d0d;
+}
+.close:hover{
+    background-color: #f90202;
+}
+.modal-dialog{
+    margin-top: 20vh;
+}
+/* detalles de lo modales de los productos */
+.talla{
+    margin-right: 1rem;
+}
+.description-modal{
+    display: flex;
+    justify-content: start;
+    align-self: self-start;
+}
+.cantidad{
+    margin-right: 1rem;
+}
+/* modificacion de cambio de pagina */
+.pagination {
+    justify-content: space-evenly;
+    font-size: x-large;
+}
